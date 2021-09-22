@@ -1,28 +1,37 @@
 # Subset_sum
-A team project done in an advanced algorithms and data structures about the subset sum problem
+A team project done in an advanced algorithms and data structures about the [subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem).
 
-El código que resuelve el problema del enunciado está en el archivo distanciamiento_social.cpp.
-Para compilarlo se debe ejecutar el comando 
-    g++ -o distanciamiento_social distanciamiento_social.cpp -O2 -std=c++14
-en la consola.
 
-Al ejecutarlo se le debe pasar un parámetro que indique cuál algoritmo se desea utilizar entre las siguientes opciones:
-    - FB: Fuerza bruta
-    - BT: Backtracking
-    - BT-F: Backtracking solamente con poda por factibilidad.
-    - BT-O: Backtracking solamente con poda por optimalidad.
-    - DP: Programación dinámica.
+## Usage
+The source code to solves the problem at hand it's located in the `distanciamiento_social.cpp` archive.
 
-Además se debe pasar la instancia por entrada estándar. Por ejemplo, para ejecutar backtracking solamente con podas por optimalidad en una instancia INST1.TXT se debe correr el siguiente comando:
-    cat INST1.txt | ./distanciamiento_social BT-O
-La salida del programa es doble. Por la salida estándar se devuelve lo pedido por el enunciado. Por la STDERR se devuelve el tiempo de ejecución del algoritmo.
+To compile it, the following fragment of code is needed to be executed in the command line:
+```
+g++ -o distanciamiento_social distanciamiento_social.cpp -O2 -std=c++14
+```
 
-La generación de instancias y corrida de experimentos de manera secuencia está programada en Python utilizando Jupyter Lab (https://jupyter.org/). Para ver los notebooks se debe instalar Jupyter Labs siguiendo las instrucciones en su web. Se recomienda seguir los pasos de instalación utilizando pip3.
+The script should use one of the following arguments to work with the desired algorithm:
+- `FB`: Brute Force
+- `BT`: Backtracking
+- `BT-F`: Backtracking with only the feasibility constraint.
+- `BT-O`: Backtracking with only the optimality constraint.
+- `DP`: Dynamic programming.
 
-Una vez instalado Jupyter Lab, abrir una consola en la carpeta python y correr el comando:
-    jupyter lab
+Lastly, an instance is needed to be processed. For example, to execute backtracking with only optimality constraints over instance `INST1.TXT`, the next command is needed:
+```
+cat INST1.txt | ./distanciamiento_social BT-O
+```
 
-Allí, existen tres archivos:
-    - generar-instancias.ipynb: genera las instancias descriptas en el trabajo y las ubica en la carpeta python/instancias.
-    - experimentos.ipynb: corre los experimentos del trabajo y deja el resultado de todas las ejecuciones en un CSV en la carpeta python/resultados
-    - analysis.ipynb: toma los resultados de las ejecuciones y genera todos los gráficos correspondientes.
+The solution itself it's shown through the standard output, and the execution time is shown through the stderr.
+
+The instance generation and run of experiments is handled in Python using [Jupyter Lab](https://jupyter.org/) (to see these notebooks, a Jupyter Labs installation is needed).
+
+Once the required software is installed, open a terminal in the `Python` folder and run:
+```
+jupyter lab
+```
+
+There are 3 files to be found:
+- `generar-instancias.ipynb`: generates the instances described in the article y places them in the `python/instancias` folder.
+- `experimentos.ipynb`: runs the experiments and stores the results of every execution in a CSV en the `python/resultados` folder.
+- `analysis.ipynb`: takes the results and renders the corresponding graphics.
