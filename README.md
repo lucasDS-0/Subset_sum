@@ -1,4 +1,4 @@
-# Subset_sum
+# Subset sum problem
 A team project done in an advanced algorithms and data structures about the [subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem).
 
 
